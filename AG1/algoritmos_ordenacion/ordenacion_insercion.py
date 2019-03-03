@@ -1,4 +1,4 @@
-# algoritmo de ordenacion
+# ordenacion por insercion
 def insertionSort(alist):
     for i in range(1, len(alist)):
 
@@ -10,7 +10,8 @@ def insertionSort(alist):
             index = index - 1
 
         alist[index] = value
+        
+    print(alist)
 
 alist = [12, 34, 45, 23, 54, 23, 25]
 insertionSort(alist)
-print(alist)
