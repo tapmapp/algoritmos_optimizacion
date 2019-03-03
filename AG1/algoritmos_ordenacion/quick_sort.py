@@ -18,6 +18,6 @@ def quick_sort(A):
     else:
       DER.append(i)
       
-  print(quick_sort(IZQ) + quick_sort(DER))
+  return quick_sort(IZQ) + quick_sort(DER)
 
 quick_sort(A)
