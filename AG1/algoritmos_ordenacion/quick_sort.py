@@ -7,17 +7,17 @@ def quick_sort(A):
   if len(A) == 2:
     return [min(A), max(A)]
   
-  IZQ=[]
-  DER=[]
+  LEFT=[]
+  RIGHT=[]
   
   pivote = (A[0]+ A[1] + A[2])/3
   
   for i in A:
     if i <= pivote :
-      IZQ.append(i)
+      LEFT.append(i)
     else:
-      DER.append(i)
+      RIGHT.append(i)
       
-  return quick_sort(IZQ) + quick_sort(DER)
+  return quick_sort(LEFT) + quick_sort(RIGHT)
 
 quick_sort(A)
