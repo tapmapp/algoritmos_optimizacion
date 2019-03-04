@@ -10,11 +10,6 @@ def distancia_divide_y_venceras(L):
   if len(L) <10: 
     return  distancia_fuerza_bruta(L)
   
-  
-  #Dividir en listas grandes
-  #pivite =  sum([L[i][0]for i in range(len(L))]) / len(L)
-  
-  
   LISTA_IZQ = sorted(L, key=lambda x: x[0])[:len(L)//2]
   LISTA_DER = sorted(L, key=lambda x: x[0])[len(L)//2:]
   
@@ -23,11 +18,20 @@ def distancia_divide_y_venceras(L):
   
   return distancia_fuerza_bruta(PUNTOS_LISTA_IZQ + PUNTOS_LISTA_DER)
   
-
-@calcular_tiempo  
-def LANZA(L):
-  return distancia_divide_y_venceras(L)
+#Fuerza Bruta
+def distancia_fuerza_bruta(L):
+  mejor_distancia = 100000e10
   
-SOL = LANZA(LISTA_2D[:1000])
+  A,B = (),()
+  
+  for i in range(len(L)):
+    for j in range(i+1, len(L)):
+      D = distancia(L[i],L[j])
+      if D < mejor_distancia:
+        A,B=L[i],L[j]
+        mejor_distancia = D
+  return [A,B] 
+
+SOL = distancia_divide_y_venceras(LISTA_2D[:1000])
 
 print(SOL)

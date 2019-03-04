@@ -15,8 +15,6 @@ def Precios(TARIFAS):
   PRECIOS = [ [9999]*N for i in [9999]*N ]
   RUTAS    = [ [""]*N for i in [9999]*N ]
   
-
-  
   for i in range(N-1):
     for j in range(i+1,N):
       MIN = TARIFAS[i][j]

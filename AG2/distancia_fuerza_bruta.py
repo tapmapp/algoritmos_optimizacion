@@ -5,8 +5,6 @@ N=100
 
 LISTA_2D = [  (random.randrange(1,N*10),random.randrange(1,N*10) )  for _ in range(N)]
 
-print(LISTA_2D)
-
 #Fuerza Bruta
 def distancia_fuerza_bruta(L):
   mejor_distancia = 100000e10
